@@ -6,28 +6,28 @@
 
 int main ()
 {
-    char Plano[10];
-    int Idade, NumDepend;
-    float TotalAPagar;
+    char plano[10];
+    int idade, numDepend;
+    float totalAPagar;
 
     printf("Digite sua idade: ");
-    scanf("%i", &Idade);
+    scanf("%i", &idade);
     printf("Digite o numero de dependentes: ");
-    scanf("%i", &NumDepend);
+    scanf("%i", &numDepend);
 
-    if (Idade >=16 && Idade <20)
-        strcpy( Plano, "Jovem");
-    if (Idade >= 20)
-        strcpy( Plano, "Adulto");
+    if (idade >=16 && idade <20)
+        strcpy( plano, "Jovem");
+    else if (idade >= 20)
+        strcpy( plano, "Adulto");
 
-    if (strcmp (Plano, "Jovem")== 0)
-        TotalAPagar = 200+12*(30+(NumDepend*10));
-    if (strcmp (Plano, "Adulto")== 0)
-        TotalAPagar = 300+(60*12);
-    if (strcmp (Plano, "Adulto")== 0 && NumDepend == 0)
-        TotalAPagar = 300+12*(60-(30*0.1));
+    if (strcmp (plano, "Jovem")== 0)
+        totalAPagar = 200+12*(30+(numDepend*10));
+    else if (strcmp (plano, "Adulto")== 0)
+        totalAPagar = 300+(60*12);
+    else if (strcmp (plano, "Adulto")== 0 && numDepend == 0)
+        totalAPagar = 300+12*(60-(30*0.1));
 
-    printf("\n\nO nome do plano e: %s\n", Plano);
-    printf("O numero de dependentes e: %i\n", NumDepend);
-    printf("O total a ser pago e: R$%f\n", TotalAPagar);
+    printf("\n\nO nome do plano e: %s\n", plano);
+    printf("O numero de dependentes e: %i\n", numDepend);
+    printf("O total a ser pago e: R$%f\n", totalAPagar);
 }
